@@ -625,3 +625,477 @@ Les premières balises à maîtriser sont :
 - `button`
 
 Ces balises constituent la base du développement HTML et seront indispensables avant d'apprendre le CSS et JavaScript.
+
+# 🎨 Introduction au CSS
+
+## Qu'est-ce que le CSS ?
+
+**CSS** (**Cascading Style Sheets**) est le langage utilisé pour mettre en forme une page HTML.
+
+Avec le CSS, on peut :
+
+- Changer les couleurs
+- Modifier la taille du texte
+- Ajouter des bordures
+- Changer les polices d'écriture
+- Modifier l'espacement
+- Positionner les éléments
+- Créer des animations
+
+> **HTML crée la structure d'une page, tandis que CSS s'occupe de son apparence.**
+
+---
+
+# Comment ajouter du CSS ?
+
+Il existe trois façons d'ajouter du CSS.
+
+## 1. CSS en ligne (Inline)
+
+```html
+<p style="color: blue;">Bonjour</p>
+```
+
+Cette méthode est peu utilisée car elle mélange le HTML et le CSS.
+
+---
+
+## 2. CSS interne
+
+```html
+<head>
+  <style>
+    p {
+      color: red;
+    }
+  </style>
+</head>
+```
+
+---
+
+## 3. CSS externe (Recommandé)
+
+Fichier HTML
+
+```html
+<link rel="stylesheet" href="style.css" />
+```
+
+Fichier **style.css**
+
+```css
+p {
+  color: red;
+}
+```
+
+Cette méthode est la plus utilisée.
+
+---
+
+# Les sélecteurs CSS
+
+Un sélecteur permet de choisir l'élément que l'on souhaite modifier.
+
+Exemple :
+
+```css
+p {
+  color: blue;
+}
+```
+
+Tous les paragraphes seront affichés en bleu.
+
+---
+
+# L'attribut `class`
+
+L'attribut **class** permet de donner un nom à un ou plusieurs éléments HTML afin de leur appliquer un style CSS.
+
+Une même classe peut être utilisée sur plusieurs éléments.
+
+## Syntaxe
+
+HTML
+
+```html
+<p class="texte">Bonjour</p>
+```
+
+CSS
+
+```css
+.texte {
+  color: red;
+}
+```
+
+Le point (`.`) devant le nom de la classe est obligatoire en CSS.
+
+---
+
+## Une classe sur plusieurs éléments
+
+```html
+<h1 class="titre">Bienvenue</h1>
+
+<p class="titre">Ceci est un paragraphe.</p>
+
+<button class="titre">Cliquer</button>
+```
+
+CSS
+
+```css
+.titre {
+  color: blue;
+}
+```
+
+Tous les éléments ayant la classe **titre** auront la même couleur.
+
+---
+
+## Plusieurs classes sur un même élément
+
+HTML
+
+```html
+<p class="texte important">Bonjour</p>
+```
+
+CSS
+
+```css
+.texte {
+  color: black;
+}
+
+.important {
+  font-weight: bold;
+}
+```
+
+Un élément peut posséder plusieurs classes.
+
+---
+
+# Quelques propriétés CSS importantes
+
+## Les propriétés du paragraphe (`p`)
+
+### Changer la couleur
+
+```css
+p {
+  color: blue;
+}
+```
+
+---
+
+### Changer la taille du texte
+
+```css
+p {
+  font-size: 20px;
+}
+```
+
+---
+
+### Changer la police
+
+```css
+p {
+  font-family: Arial;
+}
+```
+
+---
+
+### Mettre le texte en gras
+
+```css
+p {
+  font-weight: bold;
+}
+```
+
+---
+
+### Centrer le texte
+
+```css
+p {
+  text-align: center;
+}
+```
+
+---
+
+### Ajouter un espace intérieur
+
+```css
+p {
+  padding: 20px;
+}
+```
+
+---
+
+### Ajouter une marge extérieure
+
+```css
+p {
+  margin: 20px;
+}
+```
+
+---
+
+### Ajouter une couleur de fond
+
+```css
+p {
+  background-color: lightblue;
+}
+```
+
+---
+
+### Ajouter une bordure
+
+```css
+p {
+  border: 2px solid black;
+}
+```
+
+---
+
+# Les propriétés du champ `<input>`
+
+```css
+input {
+  width: 300px;
+}
+```
+
+Définit la largeur.
+
+---
+
+```css
+input {
+  height: 40px;
+}
+```
+
+Définit la hauteur.
+
+---
+
+```css
+input {
+  padding: 10px;
+}
+```
+
+Ajoute un espace intérieur.
+
+---
+
+```css
+input {
+  border: 1px solid gray;
+}
+```
+
+Ajoute une bordure.
+
+---
+
+```css
+input {
+  border-radius: 8px;
+}
+```
+
+Arrondit les coins.
+
+---
+
+```css
+input {
+  outline: none;
+}
+```
+
+Supprime le contour de sélection par défaut.
+
+---
+
+```css
+input {
+  font-size: 16px;
+}
+```
+
+Modifie la taille du texte.
+
+---
+
+# Les propriétés du bouton (`button`)
+
+```css
+button {
+  background-color: blue;
+}
+```
+
+Couleur de fond.
+
+---
+
+```css
+button {
+  color: white;
+}
+```
+
+Couleur du texte.
+
+---
+
+```css
+button {
+  border: none;
+}
+```
+
+Supprime la bordure.
+
+---
+
+```css
+button {
+  padding: 12px 25px;
+}
+```
+
+Ajoute un espace intérieur.
+
+---
+
+```css
+button {
+  border-radius: 8px;
+}
+```
+
+Arrondit les coins.
+
+---
+
+```css
+button {
+  cursor: pointer;
+}
+```
+
+Transforme le curseur en main lorsque la souris passe sur le bouton.
+
+---
+
+```css
+button {
+  font-size: 18px;
+}
+```
+
+Modifie la taille du texte.
+
+---
+
+# Les pseudo-classes et pseudo-éléments
+
+Les pseudo-classes permettent de modifier l'apparence d'un élément selon son état.
+
+Les pseudo-éléments permettent de cibler une partie précise d'un élément.
+
+---
+
+# `:hover`
+
+S'applique lorsque la souris passe sur un élément.
+
+```css
+button:hover {
+  background-color: green;
+}
+```
+
+Exemple avec un paragraphe :
+
+```css
+p:hover {
+  color: red;
+}
+```
+
+---
+
+# `:active`
+
+S'applique pendant que l'utilisateur clique sur un élément.
+
+```css
+button:active {
+  background-color: orange;
+}
+```
+
+Ou avec un paragraphe :
+
+```css
+p:active {
+  color: purple;
+}
+```
+
+---
+
+# `::first-letter`
+
+Permet de modifier uniquement la première lettre d'un paragraphe.
+
+```css
+p::first-letter {
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+}
+```
+
+Résultat :
+
+- La première lettre sera plus grande.
+- Elle sera en rouge.
+- Elle sera en gras.
+
+---
+
+# Résumé
+
+Les notions essentielles à retenir sont :
+
+- Le CSS sert à mettre en forme une page HTML.
+- Les styles peuvent être ajoutés en ligne, en interne ou dans un fichier externe.
+- Les sélecteurs permettent de choisir les éléments à modifier.
+- L'attribut **class** permet d'appliquer le même style à plusieurs éléments.
+- Les propriétés CSS modifient l'apparence des éléments.
+- Les pseudo-classes (`:hover`, `:active`) réagissent aux actions de l'utilisateur.
+- Les pseudo-éléments (`::first-letter`) permettent de styliser une partie spécifique d'un élément.
