@@ -1,26 +1,26 @@
-# Understanding `start`, `center`, and `end` in Flexbox
+# Comprendre `start`, `center` et `end` avec Flexbox
 
-Both **`justify-content`** and **`align-items`** use the values `start`, `center`, and `end` to position elements. The difference is **which axis they control**.
+Les propriétés **`justify-content`** et **`align-items`** utilisent les valeurs `start`, `center` et `end` pour positionner les éléments. La différence est **l'axe sur lequel elles agissent**.
 
-> **Remember:**
+> **À retenir :**
 >
-> - `justify-content` → Controls the **main axis**.
-> - `align-items` → Controls the **cross axis**.
+> - `justify-content` → Contrôle **l'axe principal**.
+> - `align-items` → Contrôle **l'axe secondaire**.
 
-When `flex-direction: row` (the default):
+Lorsque `flex-direction: row` (valeur par défaut) :
 
-- **Main axis** = Horizontal (Left → Right)
-- **Cross axis** = Vertical (Top → Bottom)
+- **Axe principal** = Horizontal (Gauche → Droite)
+- **Axe secondaire** = Vertical (Haut → Bas)
 
 ---
 
 # 1. `justify-content`
 
-`justify-content` positions **all flex items** along the **main (horizontal) axis**.
+La propriété **`justify-content`** permet d'aligner **tous les éléments flexibles** sur **l'axe principal (horizontal)**.
 
 ## `justify-content: start`
 
-Places all items at the **beginning (left side)** of the container.
+Place tous les éléments **au début (à gauche)** du conteneur.
 
 ### CSS
 
@@ -41,7 +41,7 @@ Places all items at the **beginning (left side)** of the container.
 </div>
 ```
 
-### Result
+### Résultat
 
 ```
 +--------------------------------+
@@ -49,17 +49,17 @@ Places all items at the **beginning (left side)** of the container.
 +--------------------------------+
 ```
 
-### Explanation
+### Explication
 
-- Items begin from the **left**.
-- There is **no extra space before the first item**.
-- Any remaining space stays on the **right**.
+- Les éléments commencent **à gauche**.
+- Il n'y a **aucun espace avant le premier élément**.
+- Tout l'espace restant se trouve **à droite**.
 
 ---
 
 ## `justify-content: center`
 
-Places all items in the **middle** of the container.
+Place tous les éléments **au centre** du conteneur.
 
 ### CSS
 
@@ -70,7 +70,7 @@ Places all items in the **middle** of the container.
 }
 ```
 
-### Result
+### Résultat
 
 ```
 +--------------------------------+
@@ -78,17 +78,17 @@ Places all items in the **middle** of the container.
 +--------------------------------+
 ```
 
-### Explanation
+### Explication
 
-- Empty space is divided equally on both sides.
-- The group of items stays together.
-- Useful for centering menus, buttons, or cards.
+- L'espace vide est réparti de manière égale à gauche et à droite.
+- Les éléments restent regroupés.
+- Très utile pour centrer un menu, des boutons ou des cartes.
 
 ---
 
 ## `justify-content: end`
 
-Places all items at the **end (right side)** of the container.
+Place tous les éléments **à la fin (à droite)** du conteneur.
 
 ### CSS
 
@@ -99,7 +99,7 @@ Places all items at the **end (right side)** of the container.
 }
 ```
 
-### Result
+### Résultat
 
 ```
 +--------------------------------+
@@ -107,21 +107,21 @@ Places all items at the **end (right side)** of the container.
 +--------------------------------+
 ```
 
-### Explanation
+### Explication
 
-- All items move to the **right**.
-- Empty space appears on the **left**.
-- Often used to align buttons or actions to the right.
+- Tous les éléments sont déplacés **à droite**.
+- L'espace vide apparaît **à gauche**.
+- Cette valeur est souvent utilisée pour aligner des boutons d'action à droite.
 
 ---
 
-# Summary of `justify-content`
+# Résumé de `justify-content`
 
-| Value    | Position |
+| Valeur   | Position |
 | -------- | -------- |
-| `start`  | Left     |
-| `center` | Middle   |
-| `end`    | Right    |
+| `start`  | Gauche   |
+| `center` | Centre   |
+| `end`    | Droite   |
 
 ```
 start
@@ -138,9 +138,9 @@ ____________[1][2][3]
 
 # 2. `align-items`
 
-`align-items` positions flex items on the **cross (vertical) axis**.
+La propriété **`align-items`** permet d'aligner les éléments sur **l'axe secondaire (vertical)**.
 
-To see the effect clearly, the container needs a height.
+Pour voir son effet, le conteneur doit avoir une hauteur.
 
 ```css
 .container {
@@ -153,7 +153,7 @@ To see the effect clearly, the container needs a height.
 
 ## `align-items: start`
 
-Places items at the **top** of the container.
+Place les éléments **en haut** du conteneur.
 
 ### CSS
 
@@ -165,7 +165,7 @@ Places items at the **top** of the container.
 }
 ```
 
-### Result
+### Résultat
 
 ```
 +----------------------+
@@ -176,17 +176,17 @@ Places items at the **top** of the container.
 +----------------------+
 ```
 
-### Explanation
+### Explication
 
-- Items stay at the **top**.
-- No empty space above them.
-- Remaining space is below.
+- Les éléments restent **en haut**.
+- Aucun espace n'est laissé au-dessus.
+- Tout l'espace restant est situé en dessous.
 
 ---
 
 ## `align-items: center`
 
-Places items in the **vertical center**.
+Place les éléments **au centre verticalement**.
 
 ### CSS
 
@@ -198,7 +198,7 @@ Places items in the **vertical center**.
 }
 ```
 
-### Result
+### Résultat
 
 ```
 +----------------------+
@@ -208,16 +208,17 @@ Places items in the **vertical center**.
 +----------------------+
 ```
 
-### Explanation
+### Explication
 
-- Equal space above and below the items.
-- Very useful for vertically centering text, icons, or buttons.
+- Les éléments sont placés au milieu.
+- L'espace est réparti de façon égale au-dessus et en dessous.
+- Très utile pour centrer verticalement du texte, des icônes ou des boutons.
 
 ---
 
 ## `align-items: end`
 
-Places items at the **bottom** of the container.
+Place les éléments **en bas** du conteneur.
 
 ### CSS
 
@@ -229,7 +230,7 @@ Places items at the **bottom** of the container.
 }
 ```
 
-### Result
+### Résultat
 
 ```
 +----------------------+
@@ -240,21 +241,21 @@ Places items at the **bottom** of the container.
 +----------------------+
 ```
 
-### Explanation
+### Explication
 
-- Items move to the **bottom**.
-- Empty space appears above them.
-- Useful for aligning elements to the bottom of a card or section.
+- Les éléments sont déplacés **en bas**.
+- L'espace vide apparaît **au-dessus**.
+- Cette valeur est utile pour aligner des éléments au bas d'une carte ou d'une section.
 
 ---
 
-# Summary of `align-items`
+# Résumé de `align-items`
 
-| Value    | Position |
+| Valeur   | Position |
 | -------- | -------- |
-| `start`  | Top      |
-| `center` | Middle   |
-| `end`    | Bottom   |
+| `start`  | Haut     |
+| `center` | Milieu   |
+| `end`    | Bas      |
 
 ```
 start
@@ -281,35 +282,37 @@ end
 
 ---
 
-# Side-by-Side Comparison
+# Comparaison des deux propriétés
 
-| Property          | Controls               | `start` | `center` | `end`  |
-| ----------------- | ---------------------- | ------- | -------- | ------ |
-| `justify-content` | Horizontal (main axis) | Left    | Middle   | Right  |
-| `align-items`     | Vertical (cross axis)  | Top     | Middle   | Bottom |
+| Propriété         | Contrôle       | `start` | `center` | `end`  |
+| ----------------- | -------------- | ------- | -------- | ------ |
+| `justify-content` | Axe principal  | Gauche  | Centre   | Droite |
+| `align-items`     | Axe secondaire | Haut    | Centre   | Bas    |
 
 ---
 
-# Easy Way to Remember
+# Astuce pour retenir
 
-Imagine a TV screen:
+Imaginez un écran :
 
 ```
 +--------------------------------------+
-| Top                                  |
+| Haut                                 |
 |                                      |
-|          Center                      |
+|               Centre                 |
 |                                      |
-| Bottom                               |
+| Bas                                  |
 +--------------------------------------+
 ```
 
-- **`justify-content`** moves items **left ↔ right**.
-- **`align-items`** moves items **up ↕ down**.
+- **`justify-content`** déplace les éléments de **gauche à droite (↔)**.
+- **`align-items`** déplace les éléments de **haut en bas (↕)**.
 
-If `flex-direction` changes to `column`, the axes also change:
+> **Attention :**
+>
+> Si `flex-direction` devient `column`, les axes changent également :
+>
+> - `justify-content` contrôle alors **le haut et le bas**.
+> - `align-items` contrôle **la gauche et la droite**.
 
-- `justify-content` controls **top ↕ bottom**.
-- `align-items` controls **left ↔ right**.
-
-This is why it is important to remember **the axis**, not just "horizontal" or "vertical."
+C'est pourquoi il est préférable de retenir **l'axe principal** et **l'axe secondaire**, plutôt que simplement **horizontal** ou **vertical**.
